@@ -225,7 +225,7 @@ pub fn generate(key_maps: HashSet<KeyMap>) -> TokenStream {
         }
 
         /// Id for a specific key
-        #[derive(Debug, Clone, PartialEq, Eq, Hash, Copy)]
+        #[derive(Debug, Clone, PartialEq, Eq, Hash, Copy, strum::EnumIter)]
         #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
         pub enum KeyMappingId {
             #(
